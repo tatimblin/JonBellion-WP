@@ -23,7 +23,7 @@ Initial Design Submission: _____
 - Header
 - Footer
 - Posts
-- - 50-50 Split view
+-- 50-50 Split view
 
 
 # Bones
