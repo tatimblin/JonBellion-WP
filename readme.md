@@ -20,10 +20,37 @@ Initial Design Submission: _____
 - Setting up of menus for footer and header
 
 ### HTML/CSS/JS
+- Responsive
 - Header
+  - Title
+  - Navigation
 - Footer
+  - Site footer
+    - Navigation
+    - Disclaimer
+  - Music footer
+    - Play pause sound
+    - Css animation progress
+    - Song title / art
+    - Purchase options pop-up
 - Posts
--- 50-50 Split view
+  - 50-50 Split view
+  - Featured image pinning (loop)
+  - Typography
+- Music Page
+  - Hero (autoplay concert video)
+  - Tour listing
+  - Mixtapes bar
+- Covers Page
+  - Hero
+  - Cover listings
+    - Image popout
+    - Download button
+  - About the artist
+  - 
+  
+### PHP
+- Featured Image on posts
 
 
 # Bones
