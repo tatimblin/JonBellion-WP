@@ -50,6 +50,7 @@ Initial Design Submission: _____
   
 ### PHP
 - Featured Image on posts
+- Remove Sidebar
 
 
 # Bones
