@@ -47,7 +47,6 @@ Initial Design Submission: _____
     - Image popout
     - Download button
   - About the artist
-  - 
   
 ### PHP
 - Featured Image on posts
