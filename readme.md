@@ -1,3 +1,58 @@
+# Album Experience
+Full interactive experience for the album 'The Human Condition' by Jon Bellion.
+Built in Wordpress on the Bones base theme (see below).
+
+The site goal is to provide users with an interactive platform to
+discover and experience specifics of the album including.
+- Music preview
+- Covers art gallery
+- Song breakdowns / insights
+- Artist crediting
+- Merch / Music store promotion
+
+Live Link: http://timblin.co/drexel/wbdv243/
+
+# Proposed Scope
+
+Initial Design Submission: _____
+
+### Dashboard Changes
+- Setting up of menus for footer and header
+
+### HTML/CSS/JS
+- Responsive
+- Header
+  - Title
+  - Navigation
+- Footer
+  - Site footer
+    - Navigation
+    - Disclaimer
+  - Music footer
+    - Play pause sound
+    - Css animation progress
+    - Song title / art
+    - Purchase options pop-up
+- Posts
+  - 50-50 Split view
+  - Featured image pinning (loop)
+  - Typography
+- Music Page
+  - Hero (autoplay concert video)
+  - Tour listing
+  - Mixtapes bar
+- Covers Page
+  - Hero
+  - Cover listings
+    - Image popout
+    - Download button
+  - About the artist
+  
+### PHP
+- Featured Image on posts
+- Remove Sidebar
+
+
 # Bones
 A Lightweight Wordpress Development Theme
 
