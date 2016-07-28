@@ -153,16 +153,21 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: $orange;
+    font-size: 0.8em;
+    text-align: center;
+    @include shadow(1);
 }
 
 	#logo {
 		margin: 0.75em 0;
 
 		a {
+            font-family: $f_head;
 			color: $white;
 		}
 	}
+
 
 /*********************
 NAVIGATION STYLES
@@ -179,6 +184,7 @@ and more scalable.
 .nav {
 	border-bottom: 0;
 	margin: 0;
+    column-count: 2;
 
 	li {
 
@@ -256,10 +262,10 @@ POSTS & CONTENT STYLES
 }
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
+			/*background-color: $white;
+			border-radius: 3px;*/
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			/*border: 1px solid $border-color;*/
 
 			header {
 				border-bottom: 1px solid $light-gray;

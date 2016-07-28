@@ -47,6 +47,15 @@ https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
 
+// My Fonts
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,100,400italic);
+
+
+$f_head:            "Architects Daughter", sans-serif;
+$f_body:            "Roboto", sans-serif;
+
 
 // font stacks
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
