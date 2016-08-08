@@ -342,6 +342,7 @@ NAVIGATION STYLES
 .nav li {
   float: left;
   position: relative;
+  margin: 0 15px;
   /*
   plan your menus and drop-downs wisely.
   */
@@ -349,19 +350,35 @@ NAVIGATION STYLES
 }
 /* line 58, ../scss/breakpoints/_768up.scss */
 .nav li a {
-  border-bottom: 0;
-  font-weight: 700;
-  /*
-  you can use hover styles here even though this size
-  has the possibility of being a mobile device.
-  */
-}
-/* line 66, ../scss/breakpoints/_768up.scss */
-.nav li a:hover, .nav li a:focus {
   color: #fff;
-  text-decoration: underline;
+  font-weight: 700;
+  text-shadow: none;
+  padding: 12px 0px;
 }
-/* line 78, ../scss/breakpoints/_768up.scss */
+/* line 64, ../scss/breakpoints/_768up.scss */
+.nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #f33a00;
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(10px);
+  transform: translateY(0px);
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+/* line 79, ../scss/breakpoints/_768up.scss */
+.nav li a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(5px);
+  transform: translateY(-5px);
+}
+/* line 92, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -372,7 +389,7 @@ NAVIGATION STYLES
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 87, ../scss/breakpoints/_768up.scss */
+/* line 101, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -381,7 +398,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 89, ../scss/breakpoints/_768up.scss */
+/* line 103, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
@@ -390,18 +407,18 @@ NAVIGATION STYLES
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 106, ../scss/breakpoints/_768up.scss */
+/* line 120, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 116, ../scss/breakpoints/_768up.scss */
+/* line 130, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 131, ../scss/breakpoints/_768up.scss */
+/* line 145, ../scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   top: auto;
   visibility: visible;
@@ -409,30 +426,61 @@ NAVIGATION STYLES
 
 /* end .nav */
 /*********************
+POSTS
+*********************/
+/* line 166, ../scss/breakpoints/_768up.scss */
+.post-home {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 171, ../scss/breakpoints/_768up.scss */
+.post-desc {
+  width: 50%;
+}
+
+/* line 175, ../scss/breakpoints/_768up.scss */
+.main {
+  margin: 100px 0;
+}
+
+/* line 182, ../scss/breakpoints/_768up.scss */
+.fixed-imgPost {
+  /* This class is for if you want to use
+     a class toggle instead of a pin in
+     scrollmagic
+  */
+}
+/* line 187, ../scss/breakpoints/_768up.scss */
+.fixed-imgPost img {
+  position: fixed;
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 151, ../scss/breakpoints/_768up.scss */
+/* line 197, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 155, ../scss/breakpoints/_768up.scss */
+/* line 201, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 160, ../scss/breakpoints/_768up.scss */
+/* line 206, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 165, ../scss/breakpoints/_768up.scss */
+/* line 211, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 173, ../scss/breakpoints/_768up.scss */
+/* line 219, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -457,7 +505,29 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 281, ../scss/breakpoints/_768up.scss */
+/* line 326, ../scss/breakpoints/_768up.scss */
+.album-link {
+  justify-content: flex-start;
+  vertical-align: middle;
+}
+
+/* line 333, ../scss/breakpoints/_768up.scss */
+.footer-menu li {
+  text-align: left;
+}
+
+/* line 338, ../scss/breakpoints/_768up.scss */
+.footer-nav_wrap {
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 1 0 auto;
+}
+
+/* line 344, ../scss/breakpoints/_768up.scss */
+.footer-links {
+  float: none;
+}
+/* line 347, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.

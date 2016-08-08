@@ -54,20 +54,34 @@ NAVIGATION STYLES
 	li {
 		float: left;
 		position: relative;
-
+        margin:0 15px;
 		a {
-			border-bottom: 0;
+            color: $white;
             font-weight: 700;
-
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
-			}
-		}
+            text-shadow: none;
+            padding: 12px 0px;
+        }
+        a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: $link-hover;
+            opacity: 0;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(10px);
+            transform: translateY(0px);
+            transition: transform 0.3s, opacity 0.3s;
+            pointer-events: none;
+        }
+        a:hover::after{
+            opacity: 1;
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(5px);
+            transform: translateY(-5px);
+        }
 
 		&:first-child {}
 		&:last-child {}
@@ -143,6 +157,38 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+
+/*********************
+POSTS
+*********************/
+
+.post-home {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-desc {
+    width: 50%;
+}
+
+.main {
+    margin:100px 0;
+}
+.feat-img {
+
+}
+
+.fixed-imgPost {
+    /* This class is for if you want to use
+       a class toggle instead of a pin in
+       scrollmagic
+    */
+    img {
+        position: fixed;
+    }
+}
+
 
 /*********************
 SIDEBARS & ASIDES
@@ -276,9 +322,30 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+
+.album-link {
+    justify-content: flex-start;
+    vertical-align: middle;
+}
+
+
+.footer-menu {
+    li {
+        text-align: left;
+    }
+}
+
+.footer-nav_wrap {
+    flex-direction: row;
+    justify-content: space-around;
+    flex:1 0 auto;
+}
+
 .footer-links {
+    float:none;
 	ul {
 		li {
+
 			a {
 				&:hover {}
 			}

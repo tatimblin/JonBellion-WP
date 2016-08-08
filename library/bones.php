@@ -112,7 +112,7 @@ function bones_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
-
+        
 /*********************
 SCRIPTS & ENQUEUEING
 *********************/
@@ -210,7 +210,8 @@ function bones_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
+			'footer-links' => __( 'Footer Links', 'bonestheme' ), // secondary nav in footer
+            'footer-ext' => __( 'Footer External', 'bonestheme' ) // secondary nav in footer
 		)
 	);
 

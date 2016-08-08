@@ -115,6 +115,69 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
+    
+    // Music Disk Animation
+    $('.wrapper').on('click', function() {
+        $(this).find('.buyHere').toggleClass('menu hide-menu');
+        $(this).find('.disk').toggleClass('rollAway');
+        $(this).find('.disk-text').toggleClass('hide-menu');
+    });
 
+    
+//SCROLL MAGIC
+    // loop through each element
+	$('.post-home').each(function(){
+        
+        // Init ScrollMagic
+        var controller = new ScrollMagic.Controller();
+
+        // pin the intro
+        var pinIntroScene = new ScrollMagic.Scene({
+            triggerElement: this.children[0],
+            triggerHook: 0.35,
+            duration: '50%'
+
+        })
+        .setPin( this.children[0], {pushFollowers: false})
+        /*.setClassToggle(this.children[0], 'fixed-imgPost')*/
+        .addIndicators({
+                name: 'fade scene',
+                colorTrigger: 'black',
+                indent: 200,
+                colorStart: '#75C695'
+        })
+        .addTo(controller);
+        
+    });
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
 
 }); /* end of as page load scripts */
