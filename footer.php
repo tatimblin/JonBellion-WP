@@ -18,19 +18,17 @@
 						)); ?>
 					</nav>
 -->
-					<nav role="navigation">
+					<div role="navigation" class="fnav">
 						<?php wp_nav_menu(array(
     					'theme_location' => 'footer-links',
                         'container_class' => 'footer-menu footer-links'
 						)); ?>
-					</nav>
+					</div>
 					
 <!-- ************************* -->
 											
-					<div class="album-link">
-                        <div class="wrapper">
-                            <div class="trigger">
-                                <div class="buyHere hide-menu">
+					
+                                <div class="buyHere footerBuyHere">
                                     <ul>
                                         <li><img src="https://lh3.googleusercontent.com/gdBHEk-u3YRDtuCU3iDTQ52nZd1t4GPmldYaT26Jh6EhXgp1mlhQiuLFl4eXDAXzDig5=w300"></li>
                                         <li><img src="http://cdn.osxdaily.com/wp-content/uploads/2010/10/giant-apple-logo-bw.png"></li>
@@ -38,33 +36,17 @@
                                         <li><img src="https://blog.zen.co.uk/wp-content/uploads/2016/04/spotify-icon-14523.png">         </li>
                                   </ul>
                             </div>
-                            <div class="disk">
-                                <div class="ring outer-ring">
-                                    <div class="solid outer-solid">
-                                        <div class="highlight"></div>
-                                        <div class="ring inner-ring">
-                                            <div class="solid inner-solid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!--Wrapper-->
-                    <div class="disk-text">
-  
-                    </div>
-                </div>
+                            
                     
 <!-- **************************** -->
 					
-					<nav role="navigation">
+					<div role="navigation" class="fnav">
 						<?wp_nav_menu( array( 
                         'theme_location' => 'footer-ext',
                         'container_class' => 'footer-menu footer-ext' 
                     ) ); ?>
 
-					</nav>
+					</div>
 				</div>
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php// bloginfo( 'name' ); ?>/
@@ -83,6 +65,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+        
+        <script src="//w.soundcloud.com/player/api.js"></script>
 
         <script src="../js/main.js"></script>
 

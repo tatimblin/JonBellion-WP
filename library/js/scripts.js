@@ -126,37 +126,200 @@ jQuery(document).ready(function($) {
     
 //SCROLL MAGIC
     // loop through each element
-	$('.post-home').each(function(){
+//	$('.post-home').each(function(){
         
         // Init ScrollMagic
-        var controller = new ScrollMagic.Controller();
+//        var controller = new ScrollMagic.Controller();
 
         // pin the intro
-        var pinIntroScene = new ScrollMagic.Scene({
-            triggerElement: this.children[0],
-            triggerHook: 0.35,
-            duration: '50%'
+//        var pinIntroScene = new ScrollMagic.Scene({
+//            triggerElement: this.children[0],
+//            triggerHook: 0.15,
+//            duration: '50%'
 
-        })
-        .setPin( this.children[0], {pushFollowers: false})
+//        })
+//        .setPin( this.children[0], {pushFollowers: false})
         /*.setClassToggle(this.children[0], 'fixed-imgPost')*/
-        .addIndicators({
+        /*.addIndicators({
                 name: 'fade scene',
                 colorTrigger: 'black',
                 indent: 200,
                 colorStart: '#75C695'
-        })
-        .addTo(controller);
+        })*/
+//        .addTo(controller);
         
-    });
+//    });
         
 
 
 
 
+// SOUNDCLOUD
+    
+jQuery(function($){ // same as document.ready but is considered a better practice
+	
+	var trackIds = [272661145, 272661532, 268382673, 272661795, 272661196, 272661158, 268382665, 272661445, 266099108, 266099063, 266099089, 266099091, 266099110];
+  
+   var trackNames = [
+    "He Is The Same",
+    "80's Films",
+    "All Time Low",
+    "New York Soul",
+    "Fashion",
+    "Maybe IDK",
+    "Woke The F*ck Up",
+    "Overwhelming",
+    "Weight Of The World",
+    "The Good In Me",
+    "iRobot",
+    "Hand Of God"
+  ];
+	
+	var trackPlayCount = 0;
+	var currentIndex = 0;
+  
+	var widget = SC.Widget('soundcloud-widget');
+
+	function playTrack(index){
+		widget.load(
+			"https://api.soundcloud.com/tracks/" + trackIds[index],
+			{
+				auto_play: true,
+				show_artwork: false,
+				liking: false,
+				sharing: false
+
+				// Check out https://developers.soundcloud.com/docs/api/html5-widget#params
+				// to see more parameters you can pass here...
+			}
+		);
+		trackPlayCount ++;
+		currentIndex = index;
+  
+  // Display Current Track Name
+    $("#title").html(trackNames[currentIndex]);
+	}
+	
+	function playNext(){
+		var nextIndex = currentIndex + 1;
+		if(nextIndex >= trackIds.length){
+			nextIndex = 0;
+		}
+		playTrack(nextIndex);
+	}
+	
+	function playPrev(){
+		var nextIndex = currentIndex - 1;
+		if(nextIndex < 0){
+			nextIndex = trackIds.length - 1;
+		}
+		playTrack(nextIndex);
+	}
+	
+	function playToggle(){
+		widget.toggle();
+	}
+
+	function onTrackFinished() {
+		playNext();
+	}
+
+
+	
+	
+	// Bind our functions to events ___________________________________
+
+	// Event: widget finished song
+	widget.bind(SC.Widget.Events.FINISH, onTrackFinished);
+	
+	// Event: clicked on #play-toggle
+	$('#play-toggle, .player-play , .player-pause').on('click', playToggle);
+	
+	$('#prev, .player-prev').on('click', playPrev);
+	
+	$('#next, .player-next').on('click', playNext);
+
+	
+	
+	
+	// And, by default we load the first song...
+	
+	playTrack(0);
+
+});
+
+// Toggle Play and Pause
+$('.player-pause, .player-play').on('click', function() {
+  
+  $('.player-pause, .player-play').toggleClass('control-hidden');
+  $('.player-progress').toggleClass('progress-pause');
+});
+
+// Toggle progress bar animation
+// $('.player-control').on('click', function() { 
+//   $('.player-progress').toggleClass('progress-pause');
+// });
+
+// Insert Track Name 
 
 
 
+// FIXED IMAGES
+// Initial code from Chelsea Myers
+// http://codepen.io/tatimblin/pen/OXdKaV?editors=0010
+    
+$(document).ready(function(){
+  headings = $('[data-section-title]');
+
+  
+});
+
+
+$(window).scroll(autoSelectStickyNav);
+
+function autoSelectStickyNav() {
+
+  var windowTop = $(window).scrollTop();
+  var h = $(window).height();
+
+  var shownHeadings = [];
+  $('[data-nav-item]').removeClass('coverActive');
+
+  headings.each(function(i){
+    if(headings[i+1]){
+      var headingOffsetTop = ($(headings[i+1]).offset().top - windowTop) / h;
+      
+      if(headingOffsetTop > 0.1 & $(this).offset().top < (windowTop + h - 300)) {
+        shownHeadings.push($(headings[i]));
+      }
+    }
+   
+
+    //If heading on screen and is 10% away from top of screen
+   
+    
+   
+
+    // If last heading, keep highlighted if scrolled passed
+    if (i == headings.length - 1 & $(this).offset().top < (windowTop + h)) {
+      shownHeadings.push($(this));
+    }
+
+  });
+
+  //Loop through headings stored as showing
+  //add active class to nav item
+  for(heading of shownHeadings){
+    var selector = '[data-nav-item="' + heading.data('section-title') + '"]';
+    if(!$(selector).hasClass('coverActive')){
+      $(selector).addClass('coverActive');
+    }
+    
+  }
+
+  
+  shownHeadings = [];
+}
 
 
 

@@ -320,10 +320,195 @@ HEADER STYLES
   float: left;
 }
 
+/* line 41, ../scss/breakpoints/_768up.scss */
+.fixed-player {
+  display: block;
+  z-index: 100;
+}
+
+/* line 46, ../scss/breakpoints/_768up.scss */
+.player-control {
+  z-index: 10;
+}
+
+/* line 50, ../scss/breakpoints/_768up.scss */
+.player-play, .player-pause {
+  z-index: 100;
+}
+
+/* line 54, ../scss/breakpoints/_768up.scss */
+#soundcloud-widget {
+  width: 420px;
+  height: 120px;
+  display: none;
+}
+
+/* line 65, ../scss/breakpoints/_768up.scss */
+.sticky-footer {
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  position: fixed;
+  z-index: 150;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop+ (document.documentElement.clientHeight-this.offsetHeight)));
+  background-color: #fff;
+}
+
+/* line 77, ../scss/breakpoints/_768up.scss */
+.player_wrap {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 85, ../scss/breakpoints/_768up.scss */
+.player-item {
+  width: 26.66%;
+}
+
+/* line 89, ../scss/breakpoints/_768up.scss */
+.player-track {
+  display: flex;
+  align-items: center;
+}
+
+/* line 94, ../scss/breakpoints/_768up.scss */
+.player-track_img {
+  width: 70px;
+  height: 70px;
+  background-color: #ccc;
+  background-image: url("http://timblin.co/drexel/wbdv243/wp-content/uploads/2016/06/TheHumanCondition.jpg");
+  background-size: cover;
+}
+
+/* line 102, ../scss/breakpoints/_768up.scss */
+.player-track_title {
+  line-height: 1.3em;
+  padding: 0 0 0 20px;
+}
+/* line 105, ../scss/breakpoints/_768up.scss */
+.player-track_title h1 {
+  font-size: 1.5em;
+  overflow: hidden;
+  line-height: 1em;
+  margin: 0;
+}
+/* line 111, ../scss/breakpoints/_768up.scss */
+.player-track_title h2 {
+  font-size: .75em;
+  color: #666;
+  margin: 0;
+}
+
+/* line 118, ../scss/breakpoints/_768up.scss */
+.player-control {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px 0;
+}
+/* line 122, ../scss/breakpoints/_768up.scss */
+.player-control .player-play, .player-control .player-pause {
+  width: 50px;
+  height: 50px;
+  background-color: #424A60;
+  border-radius: 50%;
+}
+/* line 127, ../scss/breakpoints/_768up.scss */
+.player-control .player-play img, .player-control .player-pause img {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+}
+/* line 133, ../scss/breakpoints/_768up.scss */
+.player-control .player-play img {
+  margin: 10px 10px 10px 12px;
+}
+/* line 135, ../scss/breakpoints/_768up.scss */
+.player-control .control-hidden {
+  display: none;
+}
+/* line 139, ../scss/breakpoints/_768up.scss */
+.player-control .player-next {
+  background-image: url("http://image.flaticon.com/icons/svg/148/148736.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  margin: 10px 0;
+}
+/* line 145, ../scss/breakpoints/_768up.scss */
+.player-control .player-prev {
+  background-image: url("http://image.flaticon.com/icons/svg/148/148737.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  margin: 10px 0;
+}
+
+/* line 153, ../scss/breakpoints/_768up.scss */
+.player-progress {
+  height: 5px;
+  width: 0%;
+  background-color: #F57F17;
+  animation-name: progress;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-delay: 800ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+/* line 166, ../scss/breakpoints/_768up.scss */
+.progress-pause {
+  animation-play-state: paused;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/******************************************************************
+Covers Page
+******************************************************************/
+/* line 185, ../scss/breakpoints/_768up.scss */
+.Cover_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 190, ../scss/breakpoints/_768up.scss */
+.Cover-item {
+  width: 48%;
+  margin: 1%;
+}
+
+/* line 195, ../scss/breakpoints/_768up.scss */
+.Cover-post-img {
+  height: auto;
+}
+
+/* line 199, ../scss/breakpoints/_768up.scss */
+.Cover-links {
+  height: 2em;
+}
+/* line 201, ../scss/breakpoints/_768up.scss */
+.Cover-links h2 {
+  width: 80%;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px;
+  float: left;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 45, ../scss/breakpoints/_768up.scss */
+/* line 227, ../scss/breakpoints/_768up.scss */
 .nav {
   float: right;
   column-count: 1;
@@ -334,11 +519,11 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 51, ../scss/breakpoints/_768up.scss */
+/* line 233, ../scss/breakpoints/_768up.scss */
 .nav ul {
   background: #323944;
 }
-/* line 54, ../scss/breakpoints/_768up.scss */
+/* line 236, ../scss/breakpoints/_768up.scss */
 .nav li {
   float: left;
   position: relative;
@@ -348,14 +533,14 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
-/* line 58, ../scss/breakpoints/_768up.scss */
+/* line 240, ../scss/breakpoints/_768up.scss */
 .nav li a {
   color: #fff;
   font-weight: 700;
   text-shadow: none;
   padding: 12px 0px;
 }
-/* line 64, ../scss/breakpoints/_768up.scss */
+/* line 246, ../scss/breakpoints/_768up.scss */
 .nav li a::after {
   content: '';
   position: absolute;
@@ -371,14 +556,14 @@ NAVIGATION STYLES
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 }
-/* line 79, ../scss/breakpoints/_768up.scss */
+/* line 261, ../scss/breakpoints/_768up.scss */
 .nav li a:hover::after {
   opacity: 1;
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(5px);
   transform: translateY(-5px);
 }
-/* line 92, ../scss/breakpoints/_768up.scss */
+/* line 274, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -389,7 +574,7 @@ NAVIGATION STYLES
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 101, ../scss/breakpoints/_768up.scss */
+/* line 283, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -398,7 +583,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 103, ../scss/breakpoints/_768up.scss */
+/* line 285, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
@@ -407,18 +592,18 @@ NAVIGATION STYLES
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 120, ../scss/breakpoints/_768up.scss */
+/* line 302, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 130, ../scss/breakpoints/_768up.scss */
+/* line 312, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 145, ../scss/breakpoints/_768up.scss */
+/* line 327, ../scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   top: auto;
   visibility: visible;
@@ -428,30 +613,60 @@ NAVIGATION STYLES
 /*********************
 POSTS
 *********************/
-/* line 166, ../scss/breakpoints/_768up.scss */
-.post-home {
-  display: flex;
-  justify-content: space-between;
+/* line 348, ../scss/breakpoints/_768up.scss */
+#main {
+  z-index: -1;
 }
 
-/* line 171, ../scss/breakpoints/_768up.scss */
+/* line 352, ../scss/breakpoints/_768up.scss */
+.main {
+  width: 100%;
+  margin: 50px 0;
+}
+
+/* line 357, ../scss/breakpoints/_768up.scss */
+.post-home {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* line 365, ../scss/breakpoints/_768up.scss */
 .post-desc {
+  width: 50%;
+  padding: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* line 372, ../scss/breakpoints/_768up.scss */
+.post-img {
+  position: relative;
   width: 50%;
 }
 
-/* line 175, ../scss/breakpoints/_768up.scss */
-.main {
-  margin: 100px 0;
+/* line 377, ../scss/breakpoints/_768up.scss */
+.feat-img {
+  z-index: -10;
+  top: 17vh;
+  left: 10%;
+  position: fixed;
+}
+/* line 382, ../scss/breakpoints/_768up.scss */
+.feat-img img {
+  height: 45vw;
+  max-height: 500px;
+  width: auto;
 }
 
-/* line 182, ../scss/breakpoints/_768up.scss */
-.fixed-imgPost {
-  /* This class is for if you want to use
-     a class toggle instead of a pin in
-     scrollmagic
-  */
+/* line 389, ../scss/breakpoints/_768up.scss */
+.coverActive {
+  z-index: 1;
 }
-/* line 187, ../scss/breakpoints/_768up.scss */
+
+/* line 394, ../scss/breakpoints/_768up.scss */
 .fixed-imgPost img {
   position: fixed;
 }
@@ -459,28 +674,28 @@ POSTS
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 197, ../scss/breakpoints/_768up.scss */
+/* line 404, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 201, ../scss/breakpoints/_768up.scss */
+/* line 408, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 206, ../scss/breakpoints/_768up.scss */
+/* line 413, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 211, ../scss/breakpoints/_768up.scss */
+/* line 418, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 219, ../scss/breakpoints/_768up.scss */
+/* line 426, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -505,29 +720,43 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 326, ../scss/breakpoints/_768up.scss */
+/* line 533, ../scss/breakpoints/_768up.scss */
 .album-link {
   justify-content: flex-start;
   vertical-align: middle;
 }
 
-/* line 333, ../scss/breakpoints/_768up.scss */
+/* line 540, ../scss/breakpoints/_768up.scss */
 .footer-menu li {
   text-align: left;
 }
 
-/* line 338, ../scss/breakpoints/_768up.scss */
+/* line 545, ../scss/breakpoints/_768up.scss */
+.inner-footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 550, ../scss/breakpoints/_768up.scss */
 .footer-nav_wrap {
+  width: 100%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex: 1 0 auto;
 }
 
-/* line 344, ../scss/breakpoints/_768up.scss */
+/* line 557, ../scss/breakpoints/_768up.scss */
+.fnav {
+  width: 15%;
+  height: 150px;
+  position: relative;
+}
+
+/* line 562, ../scss/breakpoints/_768up.scss */
 .footer-links {
   float: none;
 }
-/* line 347, ../scss/breakpoints/_768up.scss */
+/* line 565, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -537,6 +766,42 @@ mobile. Make sure to double check these!
 }
 
 /* end .footer-links */
+/*********************
+Artist Footer
+*********************/
+/* line 585, ../scss/breakpoints/_768up.scss */
+.footer-artist {
+  width: 100%;
+  margin: 150px 0;
+}
+
+/* line 590, ../scss/breakpoints/_768up.scss */
+.artist-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 598, ../scss/breakpoints/_768up.scss */
+#artist-inner {
+  width: 100%;
+}
+
+/* line 606, ../scss/breakpoints/_768up.scss */
+.artist_desc {
+  width: 40%;
+}
+
+/* line 610, ../scss/breakpoints/_768up.scss */
+.artist_img {
+  margin: 0;
+}
+
+/*********************
+Mixtape Footer
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -550,6 +815,41 @@ be seen on the Desktop.
 /* line 12, ../scss/breakpoints/_1030up.scss */
 .wrap {
   width: 1040px;
+}
+
+/******************************************************************
+Covers Page
+******************************************************************/
+/* line 22, ../scss/breakpoints/_1030up.scss */
+.Cover_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 27, ../scss/breakpoints/_1030up.scss */
+.Cover-item {
+  width: 30%;
+  margin: 1.66%;
+}
+
+/* line 32, ../scss/breakpoints/_1030up.scss */
+.Cover-post-img {
+  height: auto;
+}
+
+/* line 36, ../scss/breakpoints/_1030up.scss */
+.Cover-links {
+  height: 2em;
+}
+/* line 38, ../scss/breakpoints/_1030up.scss */
+.Cover-links h2 {
+  width: 80%;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px;
+  float: left;
+  font-size: 1.5em;
+  line-height: 2em;
 }
 
 /*

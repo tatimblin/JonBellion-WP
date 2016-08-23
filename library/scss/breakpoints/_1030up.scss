@@ -12,3 +12,45 @@ be seen on the Desktop.
 .wrap {
   width: 1040px;
 }
+
+
+
+/******************************************************************
+Covers Page
+******************************************************************/
+
+.Cover_wrap {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.Cover-item {
+    width:30%;
+    margin:1.66%;
+}
+
+.Cover-post-img {
+    height:auto;
+}
+
+.Cover-links {
+    height: 2em;
+    h2 {
+        width:80%;
+        overflow:hidden;
+        margin:0;
+        padding:5px;
+        float:left;
+        
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}
+
+.Cover-download {
+    
+}
+
+.Cover-feat-img {
+    
+}

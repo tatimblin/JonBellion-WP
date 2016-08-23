@@ -38,6 +38,188 @@ HEADER STYLES
         float:left;
     }
 
+.fixed-player {
+    display: block;
+    z-index: 100;
+}
+
+.player-control {
+    z-index: 10;
+}
+
+.player-play, .player-pause {
+    z-index: 100;
+}
+
+#soundcloud-widget {
+	width: 420px;
+	height: 120px;
+	display:none;
+}
+
+
+
+
+
+
+.sticky-footer {
+  width:100%;
+  height:70px;
+  bottom:0;
+    position:fixed;
+    z-index:150;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+  background-color:#fff;
+}
+
+.player_wrap {
+  width:80%;
+  margin:0 auto;
+  
+  display:flex;
+  justify-content:space-between;
+}
+
+.player-item {
+  width:26.66%;
+}
+
+.player-track {
+  display:flex;
+  align-items:center;
+}
+
+.player-track_img {
+  width:70px;
+  height:70px;
+  background-color:#ccc;
+  background-image:url('http://timblin.co/drexel/wbdv243/wp-content/uploads/2016/06/TheHumanCondition.jpg');
+  background-size:cover;
+}
+
+.player-track_title {
+  line-height:1.3em;
+  padding: 0 0 0 20px;
+  h1 {
+    font-size: 1.5em;
+    overflow:hidden;
+    line-height: 1em;
+      margin:0;
+  }
+  h2 {
+    font-size: .75em;
+    color:#666;
+      margin:0;
+  }
+}
+
+.player-control {
+  display:flex;
+  justify-content:space-around;
+  margin:5px 0;
+  .player-play, .player-pause {
+    width:50px;
+    height:50px;
+    background-color:#424A60;
+    border-radius:50%;
+    img {
+      height:30px;
+      width:30px;
+      margin:10px;
+    }
+  }
+  .player-play{img{margin:10px 10px 10px 12px;}}
+  
+  .control-hidden {
+    display:none;
+  }
+  
+  .player-next {
+    background-image: url("http://image.flaticon.com/icons/svg/148/148736.svg");
+    background-repeat: no-repeat;
+    width:30px;
+    margin:10px 0;
+  }
+  .player-prev {
+    background-image: url("http://image.flaticon.com/icons/svg/148/148737.svg");
+    background-repeat: no-repeat;
+    width:30px;
+    margin:10px 0;
+  }
+}
+
+.player-progress {
+  height:5px;
+  width:0%;
+  background-color:#F57F17;
+  
+  animation-name:progress;
+  animation-duration:30s;
+  animation-timing-function:linear;
+  animation-delay:800ms;
+  animation-iteration-count:infinite;
+  animation-fill-mode:forwards;
+}
+
+.progress-pause {
+  animation-play-state: paused;
+}
+
+@keyframes progress {
+  0% {
+    width:0%;
+  }
+  100% {
+    width:100%;
+  }
+}
+
+
+
+/******************************************************************
+Covers Page
+******************************************************************/
+
+.Cover_wrap {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.Cover-item {
+    width:48%;
+    margin:1%;
+}
+
+.Cover-post-img {
+    height:auto;
+}
+
+.Cover-links {
+    height: 2em;
+    h2 {
+        width:80%;
+        overflow:hidden;
+        margin:0;
+        padding:5px;
+        float:left;
+        
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}
+
+.Cover-download {
+    
+}
+
+.Cover-feat-img {
+    
+}
+
+
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -163,27 +345,52 @@ NAVIGATION STYLES
 POSTS
 *********************/
 
+#main {
+    z-index: -1;
+}
+
+.main {
+    width:100%;
+    margin:50px 0;
+}
+
 .post-home {
+    position: relative;
+    width:100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 .post-desc {
     width: 50%;
+    padding:0;
+    right:0;
+    z-index: -1;
 }
 
-.main {
-    margin:100px 0;
+.post-img {
+    position: relative;
+    width:50%;
 }
+
 .feat-img {
+    z-index: -10;
+    top:17vh;
+    left:10%;
+    position: fixed;
+    img {
+        height:45vw;
+        max-height: 500px;
+        width:auto;
+    }
+}
 
+.coverActive {
+    z-index: 1;
 }
 
 .fixed-imgPost {
-    /* This class is for if you want to use
-       a class toggle instead of a pin in
-       scrollmagic
-    */
     img {
         position: fixed;
     }
@@ -335,10 +542,21 @@ mobile. Make sure to double check these!
     }
 }
 
+.inner-footer {
+    width:90%;
+    margin:0 auto;
+}
+
 .footer-nav_wrap {
+    width:100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex:1 0 auto;
+}
+
+.fnav {
+    width:15%; height:150px;
+    position: relative;
 }
 
 .footer-links {
@@ -358,4 +576,51 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+
+
+/*********************
+Artist Footer
+*********************/
+
+.footer-artist {
+    width:100%;
+    margin:150px 0;
+}
+
+.artist-inner {
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#artist-inner {
+    width:100%;
+}
+
+.artist-item {
+    
+}
+
+.artist_desc {
+    width:40%;
+}
+
+.artist_img {
+    margin:0;
+}
+
+
+/*********************
+Mixtape Footer
+*********************/
+
+
+
+
+
+
+
+
 
