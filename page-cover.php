@@ -16,8 +16,9 @@
 <?php get_header(); ?>
 
 			<div id="content">
-                <div class="bg-hero bg-cover-hero">
-                                
+                <div class="bg-parallax">
+                    <div class="bg-hero bg-cover-hero"></div>
+                    <div class="content-wrapper"></div>
                 </div>
 				<div id="inner-content" class="wrap cf">
 
@@ -40,7 +41,10 @@
                                             <h2>
                                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                                             </h2>
-                                            <a class="Cover-download" href="http://timblin.co/drexel/wbdv243/wp-content/uploads/2016/06/TheHumanCondition.jpg"><img src="http://timblin.co/drexel/wbdv243/wp-content/uploads/2016/08/download_icon.png"></a>
+                                            <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                                            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                                                <a class="Cover-download" href="<?php echo $image[0]; ?>" download="<?php echo $image[0]; ?>"><img src="http://timblin.co/drexel/wbdv243/wp-content/uploads/2016/08/download_icon.png"></a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                   

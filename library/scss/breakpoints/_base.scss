@@ -252,7 +252,9 @@ and more scalable.
 	li.current_page_item,
 	li.current_page_ancestor {
 
-		a {}
+		a {
+            color: $link-color;
+        }
 
 	}  /* end current highlighters */
 
@@ -507,6 +509,9 @@ POSTS & CONTENT STYLES
 
 .feat-img {
     text-align: center;
+    img {
+        
+    }
 }
 
 
@@ -518,18 +523,36 @@ Covers Page
     margin:100px 0 0px 0;
 }
 
+.bg-parallax {
+    height:100px;
+    padding:10vh 0 50vh 0;
+    color:#fff;
+    background-color: #000;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    z-index: -10;
+}
+
 .bg-hero {
-    background-image: url(../../../../../wp-content/uploads/2016/08/TheHumanCondition_banner.jpg);
-    background-size: cover;
-    background-position: center top;
+    background-image: url(../../../../../wp-content/uploads/2016/06/TheHumanCondition.jpg);
+    background-size:cover;
+    background: no-repeat center top;
     
     width:100%;
-    height:60vh;
-    
+    //height:60vh;
+    transform: translateY('50%');
+    position: absolute;
+    height:150%;
+    top:120px;
+    z-index: 1;
+    opacity: 0.7;
 }
 
 .bg-cover-hero {
-    background-image: url(../../../../../wp-content/uploads/2016/08/TheHumanCondition_banner.jpg);
+    background-image: url(../../../../../wp-content/uploads/2016/06/TheHumanCondition.jpg);
+    background-size:cover;
 }
 
 .bg-music-hero {
@@ -970,12 +993,15 @@ FOOTER STYLES
 .footer-nav_wrap {
     display: flex;
     flex-direction: column;
-    margin:1em 0;
+    width:100%;
 }
 
+
 .footer-menu {
+    min-height: 150px;
+    text-align: center;
     ul {
-        width:150px;
+        
         text-align: center;
     }
     li {
@@ -989,10 +1015,21 @@ FOOTER STYLES
     }
 }
 
+.footer-menu .menu {
+    position: static;
+}
+
 .footer-nav {
     li {
         display:block;
     }
+}
+
+.fnav {
+    height:150px;
+    
+    display: block;
+    margin:0 auto;
 }
 
 	.footer-links {
@@ -1016,8 +1053,8 @@ Artist Footer
 
 .footer-artist {
     background-color:$white;
-    margin:50px 0;
-    padding:50px 0;
+    margin:50px 0 100px 0;
+    padding:50px 0 10px 0;
 }
 
 .artist-inner {
@@ -1028,13 +1065,13 @@ Artist Footer
 .artist_img {
     background-image: url(../../../../../wp-content/uploads/2016/08/david.jpg);
     background-size: cover;
-    width:200px; height:200px;
+//    width:200px; height:200px;
     margin:0 auto;
 }
 
 
 /*********************
-Artist Footer
+Mixtape Footer
 *********************/
 
 .footer-mixtape {
@@ -1049,6 +1086,44 @@ Artist Footer
     text-align: center;
     img {
         width:300px; height:300px;
+    }
+}
+
+
+/*********************
+Music Page Table
+*********************/
+
+.entry-content {
+    table {
+        margin:-100px 0 0 0;
+        z-index: -10;
+        _position:absolute;    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+        border-style: none;
+        @include shadow(1);
+    }
+    tr {
+        height:6em;
+        background-color: #EAEDF2;
+        border-color: $light-gray;
+        border-bottom-width:1px;
+        border-style: none;
+    }
+    td {
+        text-align: center;
+        a {
+            border:1px solid $bones-pink;
+            border-radius: 4px;
+            padding:5px;
+            text-decoration: none;
+            background-color:rgba(255,255,255, 0);
+            transition: all 300ms;
+            &:hover {
+                background-color: $bones-pink;
+                color:#fff;
+            }
+        }
     }
 }
 
@@ -1166,6 +1241,7 @@ Music Disk
   }
 
 .buyHere {
+    margin:0 auto;
   width:270px;
   right:0px;
   ul{

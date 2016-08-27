@@ -483,18 +483,23 @@ Covers Page
 .Cover-item {
   width: 48%;
   margin: 1%;
+  transition: box-shadow 300ms;
+}
+/* line 195, ../scss/breakpoints/_768up.scss */
+.Cover-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 195, ../scss/breakpoints/_768up.scss */
+/* line 200, ../scss/breakpoints/_768up.scss */
 .Cover-post-img {
   height: auto;
 }
 
-/* line 199, ../scss/breakpoints/_768up.scss */
+/* line 204, ../scss/breakpoints/_768up.scss */
 .Cover-links {
   height: 2em;
 }
-/* line 201, ../scss/breakpoints/_768up.scss */
+/* line 206, ../scss/breakpoints/_768up.scss */
 .Cover-links h2 {
   width: 80%;
   overflow: hidden;
@@ -508,7 +513,7 @@ Covers Page
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 227, ../scss/breakpoints/_768up.scss */
+/* line 232, ../scss/breakpoints/_768up.scss */
 .nav {
   float: right;
   column-count: 1;
@@ -519,11 +524,11 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 233, ../scss/breakpoints/_768up.scss */
+/* line 238, ../scss/breakpoints/_768up.scss */
 .nav ul {
   background: #323944;
 }
-/* line 236, ../scss/breakpoints/_768up.scss */
+/* line 241, ../scss/breakpoints/_768up.scss */
 .nav li {
   float: left;
   position: relative;
@@ -533,14 +538,14 @@ NAVIGATION STYLES
   */
   /* showing sub-menus */
 }
-/* line 240, ../scss/breakpoints/_768up.scss */
+/* line 245, ../scss/breakpoints/_768up.scss */
 .nav li a {
   color: #fff;
   font-weight: 700;
   text-shadow: none;
   padding: 12px 0px;
 }
-/* line 246, ../scss/breakpoints/_768up.scss */
+/* line 251, ../scss/breakpoints/_768up.scss */
 .nav li a::after {
   content: '';
   position: absolute;
@@ -556,14 +561,14 @@ NAVIGATION STYLES
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 }
-/* line 261, ../scss/breakpoints/_768up.scss */
+/* line 266, ../scss/breakpoints/_768up.scss */
 .nav li a:hover::after {
   opacity: 1;
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(5px);
   transform: translateY(-5px);
 }
-/* line 274, ../scss/breakpoints/_768up.scss */
+/* line 279, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -574,7 +579,7 @@ NAVIGATION STYLES
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 283, ../scss/breakpoints/_768up.scss */
+/* line 288, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li,
 .nav li ul.children li {
   /*
@@ -583,7 +588,7 @@ NAVIGATION STYLES
   for usability. k, bai.
   */
 }
-/* line 285, ../scss/breakpoints/_768up.scss */
+/* line 290, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 10px;
@@ -592,18 +597,18 @@ NAVIGATION STYLES
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 302, ../scss/breakpoints/_768up.scss */
+/* line 307, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 312, ../scss/breakpoints/_768up.scss */
+/* line 317, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu li ul,
 .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 327, ../scss/breakpoints/_768up.scss */
+/* line 332, ../scss/breakpoints/_768up.scss */
 .nav li:hover > ul {
   top: auto;
   visibility: visible;
@@ -613,18 +618,18 @@ NAVIGATION STYLES
 /*********************
 POSTS
 *********************/
-/* line 348, ../scss/breakpoints/_768up.scss */
+/* line 353, ../scss/breakpoints/_768up.scss */
 #main {
   z-index: -1;
 }
 
-/* line 352, ../scss/breakpoints/_768up.scss */
+/* line 357, ../scss/breakpoints/_768up.scss */
 .main {
   width: 100%;
   margin: 50px 0;
 }
 
-/* line 357, ../scss/breakpoints/_768up.scss */
+/* line 362, ../scss/breakpoints/_768up.scss */
 .post-home {
   position: relative;
   width: 100%;
@@ -633,7 +638,7 @@ POSTS
   flex-direction: row;
 }
 
-/* line 365, ../scss/breakpoints/_768up.scss */
+/* line 370, ../scss/breakpoints/_768up.scss */
 .post-desc {
   width: 50%;
   padding: 0;
@@ -641,32 +646,37 @@ POSTS
   z-index: -1;
 }
 
-/* line 372, ../scss/breakpoints/_768up.scss */
+/* line 377, ../scss/breakpoints/_768up.scss */
 .post-img {
   position: relative;
   width: 50%;
 }
 
-/* line 377, ../scss/breakpoints/_768up.scss */
+/* line 382, ../scss/breakpoints/_768up.scss */
 .feat-img {
   z-index: -10;
   top: 17vh;
   left: 10%;
   position: fixed;
 }
-/* line 382, ../scss/breakpoints/_768up.scss */
+/* line 387, ../scss/breakpoints/_768up.scss */
 .feat-img img {
-  height: 45vw;
-  max-height: 500px;
-  width: auto;
+  width: 35vw;
+  height: auto;
+  float: left;
 }
 
-/* line 389, ../scss/breakpoints/_768up.scss */
+/* line 393, ../scss/breakpoints/_768up.scss */
+.feat-img_fixed {
+  position: fixed;
+}
+
+/* line 397, ../scss/breakpoints/_768up.scss */
 .coverActive {
   z-index: 1;
 }
 
-/* line 394, ../scss/breakpoints/_768up.scss */
+/* line 402, ../scss/breakpoints/_768up.scss */
 .fixed-imgPost img {
   position: fixed;
 }
@@ -674,28 +684,28 @@ POSTS
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 404, ../scss/breakpoints/_768up.scss */
+/* line 412, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 408, ../scss/breakpoints/_768up.scss */
+/* line 416, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 413, ../scss/breakpoints/_768up.scss */
+/* line 421, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 418, ../scss/breakpoints/_768up.scss */
+/* line 426, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 426, ../scss/breakpoints/_768up.scss */
+/* line 434, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -720,24 +730,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 533, ../scss/breakpoints/_768up.scss */
+/* line 541, ../scss/breakpoints/_768up.scss */
 .album-link {
   justify-content: flex-start;
   vertical-align: middle;
 }
 
-/* line 540, ../scss/breakpoints/_768up.scss */
+/* line 548, ../scss/breakpoints/_768up.scss */
 .footer-menu li {
   text-align: left;
 }
 
-/* line 545, ../scss/breakpoints/_768up.scss */
+/* line 553, ../scss/breakpoints/_768up.scss */
 .inner-footer {
   width: 90%;
   margin: 0 auto;
 }
 
-/* line 550, ../scss/breakpoints/_768up.scss */
+/* line 558, ../scss/breakpoints/_768up.scss */
 .footer-nav_wrap {
   width: 100%;
   flex-direction: row;
@@ -745,18 +755,18 @@ mobile. Make sure to double check these!
   flex: 1 0 auto;
 }
 
-/* line 557, ../scss/breakpoints/_768up.scss */
+/* line 565, ../scss/breakpoints/_768up.scss */
 .fnav {
   width: 15%;
   height: 150px;
   position: relative;
 }
 
-/* line 562, ../scss/breakpoints/_768up.scss */
+/* line 570, ../scss/breakpoints/_768up.scss */
 .footer-links {
   float: none;
 }
-/* line 565, ../scss/breakpoints/_768up.scss */
+/* line 573, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -769,13 +779,13 @@ mobile. Make sure to double check these!
 /*********************
 Artist Footer
 *********************/
-/* line 585, ../scss/breakpoints/_768up.scss */
+/* line 593, ../scss/breakpoints/_768up.scss */
 .footer-artist {
   width: 100%;
-  margin: 150px 0;
+  margin: 50px 0 150px 0;
 }
 
-/* line 590, ../scss/breakpoints/_768up.scss */
+/* line 598, ../scss/breakpoints/_768up.scss */
 .artist-inner {
   width: 100%;
   display: flex;
@@ -784,17 +794,17 @@ Artist Footer
   align-items: center;
 }
 
-/* line 598, ../scss/breakpoints/_768up.scss */
+/* line 606, ../scss/breakpoints/_768up.scss */
 #artist-inner {
   width: 100%;
 }
 
-/* line 606, ../scss/breakpoints/_768up.scss */
+/* line 614, ../scss/breakpoints/_768up.scss */
 .artist_desc {
   width: 40%;
 }
 
-/* line 610, ../scss/breakpoints/_768up.scss */
+/* line 618, ../scss/breakpoints/_768up.scss */
 .artist_img {
   margin: 0;
 }

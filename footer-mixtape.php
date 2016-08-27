@@ -3,13 +3,28 @@
             <h1>The Mixtapes</h1>
             
 				<div id="artist-inner" class="wrap cf artist-inner">
+                       
                     <div class="mixtape-item mixtape1">
-                        <img src="../wp-content/uploads/2016/08/Definition.jpg">
-                        <p>The Separation</p>
+                        <?php 
+                            $my_query = new WP_Query('page_id=155');
+                            if (have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+                            $do_not_duplicate = $post->ID;
+
+                            the_post_thumbnail('medium');
+                            the_content();
+                            endwhile; endif;
+                        ?>
                     </div>
                     <div class="mixtape-item mixtape2">
-                        <img src="../wp-content/uploads/2016/08/Separation.jpg">
-                        <p>Definition</p>
+                        <?php 
+                            $my_query = new WP_Query('page_id=157');
+                            if (have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+                            $do_not_duplicate = $post->ID;
+
+                            the_post_thumbnail('medium');
+                            the_content();
+                            endwhile; endif;
+                        ?>
                     </div>
 
 				</div>

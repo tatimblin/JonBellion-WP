@@ -123,36 +123,6 @@ jQuery(document).ready(function($) {
         $(this).find('.disk-text').toggleClass('hide-menu');
     });
 
-    
-//SCROLL MAGIC
-    // loop through each element
-//	$('.post-home').each(function(){
-        
-        // Init ScrollMagic
-//        var controller = new ScrollMagic.Controller();
-
-        // pin the intro
-//        var pinIntroScene = new ScrollMagic.Scene({
-//            triggerElement: this.children[0],
-//            triggerHook: 0.15,
-//            duration: '50%'
-
-//        })
-//        .setPin( this.children[0], {pushFollowers: false})
-        /*.setClassToggle(this.children[0], 'fixed-imgPost')*/
-        /*.addIndicators({
-                name: 'fade scene',
-                colorTrigger: 'black',
-                indent: 200,
-                colorStart: '#75C695'
-        })*/
-//        .addTo(controller);
-        
-//    });
-        
-
-
-
 
 // SOUNDCLOUD
     
@@ -322,25 +292,32 @@ function autoSelectStickyNav() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     
+// Init ScrollMagic
+    var controller = new ScrollMagic.Controller();
+
+// Scrollmagic Parallax
+    var parallaxTl = new TimelineMax();
+    parallaxTl
+        .from('.content-wrapper', 0.4, {autoAlpha: 0, ease:Power0.easeNone}, 0.4)
+        .from('.bg-hero', 1, {y: '-50%', ease:Power0.easeNone}, 0)
+        ;
+
+    var slideParallaxScene = new ScrollMagic.Scene({
+        triggerElement: '.bg-parallax',
+        triggerHook: .22,
+        duration: '75%'
+    })
+    .setTween(parallaxTl)      
+    .addTo(controller);
     
-    
-    
-    
-    
-    
-    
+// ScrollMagic Dissolve feat-img
+    var dissolveFeat = new ScrollMagic.Scene({
+        triggerElement: '.pagination',
+        triggerHook:.8
+    })
+    .setClassToggle(this, 'fade-in')
+    .addIndicators()
+    .addTo(controller);
 
 }); /* end of as page load scripts */

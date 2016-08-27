@@ -190,6 +190,11 @@ Covers Page
 .Cover-item {
     width:48%;
     margin:1%;
+    
+    transition: box-shadow 300ms;
+    &:hover {
+        @include shadow(3);
+    }
 }
 
 .Cover-post-img {
@@ -380,10 +385,13 @@ POSTS
     left:10%;
     position: fixed;
     img {
-        height:45vw;
-        max-height: 500px;
-        width:auto;
+        width:35vw; height:auto;
+        float:left;
     }
+}
+
+.feat-img_fixed {
+    position:fixed;
 }
 
 .coverActive {
@@ -584,7 +592,7 @@ Artist Footer
 
 .footer-artist {
     width:100%;
-    margin:150px 0;
+    margin:50px 0 150px 0;
 }
 
 .artist-inner {
