@@ -197,6 +197,8 @@ and more scalable.
 		a {
 			display: block;
 			color: $white;
+            font-weight: 700;
+            font-size: 1.5em;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -251,9 +253,10 @@ and more scalable.
 	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
-
+        
 		a {
-            color: $link-color;
+            color: $link-hover;
+            
         }
 
 	}  /* end current highlighters */
@@ -316,6 +319,10 @@ POSTS & CONTENT STYLES
 		.category-slug {}   /* style by category (i.e. category-videos) */
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
+        .article-header {
+            font-size:1.5em;
+        }
+
 		/* post meta */
 		.byline {
 			color: $meta-gray;
@@ -328,7 +335,6 @@ POSTS & CONTENT STYLES
 		/* entry content */
 		.entry-content {
 			padding: 1.5em 1.5em 0;
-
 			p {
 				margin: 0 0 1.5em;
 			}
@@ -510,7 +516,8 @@ POSTS & CONTENT STYLES
 .feat-img {
     text-align: center;
     img {
-        
+        width:100%;
+        height:auto;
     }
 }
 
@@ -1063,8 +1070,6 @@ Artist Footer
 }
 
 .artist_img {
-    background-image: url(../../../../../wp-content/uploads/2016/08/david.jpg);
-    background-size: cover;
 //    width:200px; height:200px;
     margin:0 auto;
 }

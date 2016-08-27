@@ -245,6 +245,7 @@ NAVIGATION STYLES
 		a {
             color: $white;
             font-weight: 700;
+            font-size: 1em;
             text-shadow: none;
             padding: 12px 0px;
         }
@@ -341,6 +342,12 @@ NAVIGATION STYLES
 	li.current_page_item,
 	li.current_page_ancestor {
 		a {}
+        a::after{
+            opacity: 1;
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(5px);
+            transform: translateY(-5px);
+        }
 	}  /* end current highlighters */
 
 } /* end .nav */
@@ -388,20 +395,31 @@ POSTS
         width:35vw; height:auto;
         float:left;
     }
+    opacity:1;
+    transition:opacity 200ms;
 }
 
 .feat-img_fixed {
     position:fixed;
 }
 
+.feat-img-fade {
+    opacity:0;
+    z-index: -10;
+}
+
 .coverActive {
-    z-index: 1;
+    z-index: 10;
 }
 
 .fixed-imgPost {
     img {
         position: fixed;
     }
+}
+
+.entry-content {
+    width:100%;
 }
 
 
@@ -565,6 +583,7 @@ mobile. Make sure to double check these!
 .fnav {
     width:15%; height:150px;
     position: relative;
+    z-index: 10;
 }
 
 .footer-links {

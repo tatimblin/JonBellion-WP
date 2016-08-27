@@ -244,6 +244,8 @@ $(document).ready(function(){
   
 });
 
+$('#post-63:first-child').css('z-index','5');
+$('#post-30:first-child').css('z-index','5');
 
 $(window).scroll(autoSelectStickyNav);
 
@@ -314,10 +316,9 @@ function autoSelectStickyNav() {
 // ScrollMagic Dissolve feat-img
     var dissolveFeat = new ScrollMagic.Scene({
         triggerElement: '.pagination',
-        triggerHook:.8
+        triggerHook:1
     })
-    .setClassToggle(this, 'fade-in')
-    .addIndicators()
+    .setClassToggle('.feat-img', 'feat-img-fade')
     .addTo(controller);
 
 }); /* end of as page load scripts */
